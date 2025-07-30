@@ -5,7 +5,7 @@ import img from '../assets/img.png'
 export default function Home() {
   return (
     <div>
-      <div className='flex justify-around mt-40 '>
+      <div className='flex justify-around mt-20 mb-20 '>
         <h1 className='text-5xl mt-25'>Hi 👋,<br/>
           My name is<br/>
           Harish Lakshmanan<br/>

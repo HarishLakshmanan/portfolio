@@ -15,7 +15,7 @@ import mongo from '../assets/Mongo DB.svg'
 
 export default function TechStack() {
   return (
-    <div className='mt-30 mb-20'>
+    <div className='mt-7'>
       <div className=''>
         <p className=' flex justify-center text-4xl font-bold mb-10'>My Tech Stack</p>
         <p className='flex justify-center text-4xl font- text-gray-500'>Technologies I’ve been working with recently</p>

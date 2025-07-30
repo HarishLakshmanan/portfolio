@@ -5,7 +5,7 @@ import lo from '../assets/lo.svg'
 
 export default function About() {
   return (
-    <div className='flex flex-col mt-10 w-200 ms-20'>
+    <div className='flex flex-col w-200 ms-20 '>
       <div className='ms-30'>
         <h1 className='font-bold text-4xl'>About Me</h1>
         <p className='text-4sm  mt-5  text-gray-500'>Driven and adaptable full-stack web developer with a strong foundation in both front-end and backend technology.
@@ -50,7 +50,7 @@ export default function About() {
             <div className='flex'>
               <img src={ca} className='w-4 h-4 mt-0.5'/> <p className='ms-1 text-sm'>Sep 2020 - May 2024</p>
             </div>
-          </div>
+          </div><hr className='mt-4 text-gray-500'/>
         </div>
       </div>
     </div>
