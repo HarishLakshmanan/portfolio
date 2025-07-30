@@ -13,29 +13,48 @@ import vscode from '../assets/vscode.svg'
 import postg from '../assets/post.png'
 import mongo from '../assets/Mongo DB.svg'
 
+const techStack = [
+  { name: 'HTML5', icon: html },
+  { name: 'CSS3', icon: css },
+  { name: 'JavaScript', icon: js },
+  { name: 'Node.js', icon: node },
+  { name: 'Express.js', icon: express },
+  { name: 'React.js', icon: react },
+  { name: 'Tailwind CSS', icon: tailwind },
+  { name: 'Bootstrap', icon: bootstrap },
+  { name: 'MongoDB', icon: mongo },
+  { name: 'PostgreSQL', icon: postg },
+  { name: 'VS Code', icon: vscode },
+  { name: 'Git', icon: git },
+  { name: 'GitHub', icon: github },
+]
+
 export default function TechStack() {
   return (
-    <div className='mt-7'>
-      <div className=''>
-        <p className=' flex justify-center text-4xl font-bold mb-10'>My Tech Stack</p>
-        <p className='flex justify-center text-4xl font- text-gray-500'>Technologies I’ve been working with recently</p>
-      </div>
+    <section id="tech" className="py-16 px-6 md:px-20 bg-white dark:bg-gray-950 text-center">
+      <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">My Tech Stack</h2>
+      <p className="text-gray-500 dark:text-gray-400 text-lg">
+        Technologies I’ve been working with recently
+      </p>
 
-      <div className='grid grid-cols-5 gap-4 ms-20 mt-20 '>
-        <img src={html} alt="" className='w-25 h-25 mt-5'/>
-        <img src={css} alt="" className='w-25 h-25  mt-5'/>
-        <img src={js} alt="" className='w-25 h-25 mt-5'/>
-        <img src={node} alt="" className='w-25 h-25 mt-5'/>
-        <img src={express} alt="" className='w-25 h-25 mt-5'/>
-        <img src={react} alt="" className='w-25 h-25 mt-5'/>
-        <img src={tailwind} alt="" className='w-25 h-25 mt-5' />
-        <img src={bootstrap} alt=""className=' mt-5' />
-        <img src={mongo} alt="" className='w-25 h-25 mt-5'/>
-        <img src={postg} alt="" className='w-25 h-25 mt-5'/>
-        <img src={vscode} alt="" className='w-25 h-25 mt-5'/>
-        <img src={git} alt="" className='w-25 h-25 mt-5'/>
-        <img src={github} alt="" className='w-25 h-25 mt-5'/>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-8 mt-14 place-items-center">
+        {techStack.map((tech, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center group hover:scale-105 transition-transform duration-300"
+            title={tech.name}
+          >
+            <img
+              src={tech.icon}
+              alt={tech.name}
+              className="w-16 h-16 object-contain dark:invert"
+            />
+            <span className="text-sm mt-2 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 transition">
+              {tech.name}
+            </span>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   )
 }
