@@ -65,7 +65,7 @@ export default function Projects() {
         <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">Things I’ve built so far</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -74,7 +74,7 @@ export default function Projects() {
             <img
               src={project.image}
               alt={project.title}
-              className="h-48 w-full object-cover"
+              className="h-42 w-full "
             />
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
